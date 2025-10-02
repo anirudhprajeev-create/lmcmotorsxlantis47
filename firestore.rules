@@ -1,0 +1,17 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow public read access to the vehicles collection
+    match /vehicles/{vehicleId} {
+      allow read: if true;
+      allow write: if false; // Keep writes restricted
+    }
+
+    // Default deny all other collections
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
