@@ -24,7 +24,7 @@ export default function GalleryPage() {
                                         src={image.imageUrl} 
                                         alt={image.description}
                                         fill
-                                        className="object-contain w-full h-full transition-transform duration-300 hover:scale-105"
+                                        className="object-contain w-full h-full"
                                         data-ai-hint={image.imageHint}
                                         sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                                     />
